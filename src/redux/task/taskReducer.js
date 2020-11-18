@@ -1,4 +1,4 @@
-import * as actionTypes from "./cakeTypes";
+import * as actionTypes from "./taskTypes";
 
 const initialState = {
     tasks: [],
