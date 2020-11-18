@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Task({ task }) {
-    const showPendingTasks = useSelector(state => state.showPendingTasks);
+    const showPendingTasks = useSelector(state => state.task.showPendingTasks);
 
     return (
         <div className="task" style={{ background: task.color }}>

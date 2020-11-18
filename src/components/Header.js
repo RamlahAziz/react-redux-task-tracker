@@ -3,7 +3,7 @@ import { setShowPendingTasks } from "../redux/task/taskActions";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function Header() {
-    const showPendingTasks = useSelector(state => state.showPendingTasks);
+    const showPendingTasks = useSelector(state => state.task.showPendingTasks);
     const dispatch = useDispatch();
 
     return (

@@ -4,10 +4,11 @@ import Task from "./Task";
 import Header from "./Header";
 import { deleteTask, completeTask } from "../redux/task/taskActions";
 import { useSelector, useDispatch } from "react-redux";
+import UserContainer from "./UserContainer";
 
 export default function ToDo() {
-    const tasks = useSelector(state => state.tasks);
-    const showPendingTasks = useSelector(state => state.showPendingTasks);
+    const tasks = useSelector(state => state.task.tasks);
+    const showPendingTasks = useSelector(state => state.task.showPendingTasks);
     const dispatch = useDispatch();
 
     const handleClick = (e, id) => {
