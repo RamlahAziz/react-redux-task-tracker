@@ -7,6 +7,7 @@
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: radial-gradient(
@@ -88,6 +89,18 @@
             transparent
         );
     background-size: 100px 50px;
+}
+
+.appDisplayButton {
+    padding: 1em;
+    margin-top: 1em;
+    font-size: 1.5em;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 25em;
+    border-radius: 1em;
+    background: rgb(92, 85, 86, 0.9);
+    cursor: pointer;
 }
 
 .tab {
@@ -202,6 +215,7 @@ input[type="text"] {
     flex: 1;
     border-radius: 1em;
 }
+
 .add-tasks input[type="submit"] {
     background: #68048299;
     cursor: pointer;
@@ -224,6 +238,15 @@ input[type="color"]:focus-visible {
     height: 4em;
     outline: 0;
     margin-top: 1em;
+}
+
+.list {
+    font-size: small;
+    background: rgb(245, 143, 41);
+    margin: 1em;
+    text-align: start;
+    padding: 0.5em;
+    border-radius: 0.7em;
 }
 
 /* .App-logo {
