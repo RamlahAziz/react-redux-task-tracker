@@ -4,7 +4,7 @@
 // Mark task as completed
 // Show pending tasks : true / false
 
-import * as actionTypes from "./cakeTypes";
+import * as actionTypes from "./taskTypes";
 
 export const addTask = (text, color) => {
     // QUESTION ???
