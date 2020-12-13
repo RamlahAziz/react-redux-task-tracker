@@ -29,7 +29,7 @@ const taskReducer = (state = initialState, action) => {
                 ...state,
                 tasks: [
                     ...state.tasks.filter(
-                        task => task.id !== action.payload.id
+                        (task) => task.id !== action.payload.id
                     ),
                 ],
             };
@@ -38,7 +38,7 @@ const taskReducer = (state = initialState, action) => {
             return {
                 ...state,
                 tasks: [
-                    ...state.tasks.map(task =>
+                    ...state.tasks.map((task) =>
                         task.id === action.payload.id
                             ? { ...task, completed: true }
                             : task

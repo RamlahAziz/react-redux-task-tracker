@@ -3,7 +3,7 @@ import { fetchUsers, selectUser } from "../redux/user/userActions";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function UserContainer(props) {
-    const userList = useSelector(state => state.user);
+    const userList = useSelector((state) => state.user);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function UserContainer(props) {
     };
 
     return (
-        <div className="wrapper">
+        <div className='wrapper'>
             {userList.loading ? (
                 <h2>Loading</h2>
             ) : userList.error ? (
@@ -28,11 +28,12 @@ export default function UserContainer(props) {
                     <div>
                         {userList &&
                             userList.users &&
-                            userList.users.map(user => (
+                            userList.users.map((user) => (
                                 <p
-                                    className="list"
+                                    className='list'
                                     key={user.id}
-                                    onClick={e => handleClick(e, user.id)}>
+                                    onClick={(e) => handleClick(e, user.id)}
+                                >
                                     {user.name}
                                 </p>
                             ))}

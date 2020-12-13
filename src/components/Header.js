@@ -3,26 +3,30 @@ import { setShowPendingTasks } from "../redux/task/taskActions";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function Header() {
-    const showPendingTasks = useSelector(state => state.task.showPendingTasks);
+    const showPendingTasks = useSelector(
+        (state) => state.task.showPendingTasks
+    );
     const dispatch = useDispatch();
 
     return (
-        <div className="tab">
-            <h2 className="title">
+        <div className='tab'>
+            <h2 className='title'>
                 {showPendingTasks ? "Pending Tasks" : "Completed Tasks"}
             </h2>
             <button
                 className={`showPending ${
                     showPendingTasks ? "activeButton" : ""
                 }`}
-                onClick={() => dispatch(setShowPendingTasks(true))}>
+                onClick={() => dispatch(setShowPendingTasks(true))}
+            >
                 Pending
             </button>
             <button
                 className={`showCompleted ${
                     showPendingTasks ? "" : "activeButton"
                 }`}
-                onClick={() => dispatch(setShowPendingTasks(false))}>
+                onClick={() => dispatch(setShowPendingTasks(false))}
+            >
                 Completed
             </button>
         </div>

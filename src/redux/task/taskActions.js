@@ -19,7 +19,7 @@ export const addTask = (text, color) => {
     };
 };
 
-export const deleteTask = id => {
+export const deleteTask = (id) => {
     return {
         type: actionTypes.DELETE_TASK,
         payload: {
@@ -28,7 +28,7 @@ export const deleteTask = id => {
     };
 };
 
-export const completeTask = id => {
+export const completeTask = (id) => {
     return {
         type: actionTypes.TASK_COMPLETED,
         payload: {

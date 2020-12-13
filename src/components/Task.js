@@ -2,13 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Task({ task }) {
-    const showPendingTasks = useSelector(state => state.task.showPendingTasks);
+    const showPendingTasks = useSelector(
+        (state) => state.task.showPendingTasks
+    );
 
     return (
-        <div className="task" style={{ background: task.color }}>
+        <div className='task' style={{ background: task.color }}>
             <p>{task.text}</p>
-            {showPendingTasks && <button className="completed">✔</button>}
-            <button className="remove">✖</button>
+            {showPendingTasks && <button className='completed'>✔</button>}
+            <button className='remove'>✖</button>
         </div>
     );
 }
